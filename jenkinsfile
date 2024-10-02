@@ -11,7 +11,8 @@ pipeline {
                 script {
                     dir("eks-cluster") {
                         sh "terraform init"
-                        sh "terraform apply -auto-approve"  // Ensure correct spacing
+                        sh "terraform apply -auto-approve"  // Ensure correct spacing 
+                        sh "terraform destroy -auto-approve"
                     }
                 }
             }
